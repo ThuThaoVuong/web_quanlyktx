@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-1: #e90000;
+    --color-2: #ffffff;
+    --color-3: #303030;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color: var(--color-1);
+    z-index: 9999;
+    border: 0;
+    font-size: 16px !important;
+    line-height: 1.42857143 !important;
+    border-radius: 0;
+    font-family: "Roboto", sans-serif;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: var(--color-2) !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: var(--color-1) !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: var(--color-2) !important;
+}
+.navbar-toggle{
+    float:left;
+    color: var(--color-2);
+}
+
+.navbar-brand{
+    float: right;
+}
+
+.sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: var(--color-1);
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+.sidebar .nav > li > a {
+    color: var(--color-2);
+    padding: 12px 20px;
+}
+
+.sidebar .nav > li > a:hover,.sidebar .nav > li > a:active,
+.sidebar .nav > li.active > a {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    border-radius: 0;
+}
+.main-content {
+    margin-left: 200px;
+    padding: 50px;
+}
+
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--color-1);
+    font-weight: 600;
+    margin: 20px auto;
+}
+
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: var(--color-3);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.btn{
+    background-color: var(--color-1);
+    color: var(--color-2);
+    margin-bottom: 10px;
+}
+.btn:hover{
+    background-color: var(--color-2);
+    color: var(--color-1);
+    border: 1px solid var(--color-1);
+    
+}
+
+.static{
+    background-color: white; 
+    padding: 10px; 
+    border-radius: 5px; 
+    margin: 10px; 
+    border: 1.5px solid var(--color-1);
+    box-shadow: 0 1px 1px var(--color-1);
+    transition: box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar.collapse {
+        display: none;
+    }
+
+    .sidebar.collapse.in {
+        display: block;
+    }
+}
+.in{
+    display: block;
+}
+@media (min-width: 768px) {
+    .sidebar.collapse {
+        display: block !important;
+    }
+}
